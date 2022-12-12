@@ -1,5 +1,4 @@
-import Link from '@mui/material/Link'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import Mlink from '@mui/material/Link'
 import {
   AppBar,
   Toolbar,
@@ -19,7 +18,7 @@ const Navbar = () => {
     <AppBar position='sticky'>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <div>
-          <Link href='/' underline='none' color='white'>
+          <Mlink href='../' underline='none' color='white'>
             <IconButton
               size='large'
               edge='start'
@@ -36,24 +35,24 @@ const Navbar = () => {
                 Home
               </Typography>
             </IconButton>
-          </Link>
+          </Mlink>
         </div>
         <div>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Link
-              href='/viewpost'
+            <Mlink
+              href='../viewpost'
               underline='none'
               sx={{ marginRight: '20px' }}
             >
               <Button startIcon={<VisibilityIcon />} sx={{ color: 'white' }}>
                 ViewPost
               </Button>
-            </Link>
-            <Link href='/createpost' underline='none'>
+            </Mlink>
+            <Mlink href='../createpost' underline='none'>
               <Button startIcon={<PostAddIcon />} sx={{ color: 'white' }}>
                 Create Post
               </Button>
-            </Link>
+            </Mlink>
           </Box>
         </div>
         <div>

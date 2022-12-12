@@ -8,7 +8,7 @@ interface IReview {
   content: string
 }
 
-const CreateReview = () => {
+const CreatePost = () => {
   const [review, setReview] = useState<IReview>({
     title: '',
     content: '',
@@ -96,4 +96,4 @@ const CreateReview = () => {
     </>
   )
 }
-export default CreateReview
+export default CreatePost
