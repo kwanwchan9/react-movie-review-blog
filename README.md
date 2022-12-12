@@ -25,6 +25,7 @@ mySQL Database:
 API get endpoint:
 ![Demo_Img_5](/image/Screenshot_api_get.png)
 
-Notification for Post and Delete:
+Notification for Post and Delete:<br />
 ![Demo_Img_6](/image/Screenshot_successfully_post.png)
+
 ![Demo_Img_7](/image/Screenshot_successfully_delete.png)
