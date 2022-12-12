@@ -8,16 +8,16 @@ import './App.css'
 
 function App() {
   return (
-    <HashRouter>
-      {/* <BrowserRouter> */}
+    // <HashRouter>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/viewpost' element={<ViewPost />}></Route>
         <Route path='/createpost' element={<CreatePost />}></Route>
       </Routes>
-      {/* </BrowserRouter> */}
-    </HashRouter>
+    </BrowserRouter>
+    // </HashRouter>
   )
 }
 
