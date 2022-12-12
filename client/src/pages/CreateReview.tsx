@@ -20,19 +20,26 @@ const CreateReview = () => {
   }
 
   const handleSubmit = () => {
-    axios
-      .post('http://localhost:3001/api/insert', review)
-      .then(() => {
-        console.log('success')
-        toast('Successfully post')
-      })
-      .catch((err) => console.log(err))
+    if (!review.title || !review.content)
+      return toast.error('Please input all the field as required')
+    try {
+      axios
+        .post('http://localhost:3001/api/insert', review)
+        .then(() => toast.success('Successfully Post!'))
+    } catch (error) {
+      console.log(error)
+    }
+    setReview({
+      title: '',
+      content: '',
+    })
   }
 
   return (
     <>
+      <Toaster />
       <Container
-        style={{
+        sx={{
           width: '100vw',
           height: '90vh',
           display: 'flex',
@@ -40,7 +47,6 @@ const CreateReview = () => {
           alignItems: 'center',
         }}
       >
-        <Toaster />
         <Box
           sx={{
             bgcolor: 'hsl(40, 100%, 99%)',
@@ -53,17 +59,20 @@ const CreateReview = () => {
             borderRadius: '8%',
           }}
         >
-          <h1 style={{ textAlign: 'center' }}>Create A Movie Review</h1>
+          <h1 style={{ textAlign: 'center' }}>Create A Movie Review Post</h1>
           <h3 style={{ marginTop: '10px' }}>Movie Title:</h3>
           <TextField
+            required
             id='standard-basic'
             variant='standard'
             fullWidth
             name='title'
+            value={review.title}
             onChange={handleChange}
           />
           <h3 style={{ margin: '10px 0 10px 0' }}>Review: </h3>
           <TextField
+            required
             id='standard-multiline-static'
             label='Comment:'
             multiline
@@ -72,6 +81,7 @@ const CreateReview = () => {
             placeholder='Leave your comment..'
             variant='outlined'
             name='content'
+            value={review.content}
             onChange={handleChange}
           />
           <Button

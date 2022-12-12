@@ -23,7 +23,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/api/get', (req, res) => {
   const sqlSelect = 'SELECT * FROM movie_reviews;'
   db.query(sqlSelect, (error, result) => {
-    if (error) console.log(error)
+    if (error) return console.log(error)
+    res.send(result)
+  })
+})
+
+app.get('/api/getrandom', (req, res) => {
+  const sqlSelect = 'SELECT * FROM movie_reviews ORDER BY RAND() LIMIT 1;'
+  db.query(sqlSelect, (error, result) => {
+    if (error) return console.log(error)
     res.send(result)
   })
 })
@@ -35,11 +43,18 @@ app.post('/api/insert', (req, res) => {
     'INSERT INTO movie_reviews (movieName, movieReview) VALUES (?,?);'
   db.query(sqlInsert, [movieName, movieReview], (error, result) => {
     if (error) console.log(error)
+    res.send(result)
   })
 })
 
-app.delete('api/delete/:id', (req, res) => {
-  // res.send(`Deleted ${}`)
+app.delete('/api/delete/:id', (req, res) => {
+  const id = parseInt(req.params.id)
+  console.log(id)
+  const sqlDelete = 'DELETE FROM movie_reviews WHERE id = ?;'
+  db.query(sqlDelete, id, (error, result) => {
+    if (error) return console.log(error)
+    res.send('Successfully Deleted')
+  })
 })
 
 app.listen(3001, () => {
