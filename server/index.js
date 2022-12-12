@@ -49,7 +49,6 @@ app.post('/api/insert', (req, res) => {
 
 app.delete('/api/delete/:id', (req, res) => {
   const id = parseInt(req.params.id)
-  console.log(id)
   const sqlDelete = 'DELETE FROM movie_reviews WHERE id = ?;'
   db.query(sqlDelete, id, (error, result) => {
     if (error) return console.log(error)
