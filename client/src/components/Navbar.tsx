@@ -18,7 +18,12 @@ const Navbar = () => {
     <AppBar position='sticky'>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <div>
-          <Mlink href='./' underline='none' color='white'>
+          <Mlink
+            href='/react-node-typescript-mysql-crud-movie-review-blog'
+            // href='/'
+            underline='none'
+            color='white'
+          >
             <IconButton
               size='large'
               edge='start'
@@ -40,7 +45,8 @@ const Navbar = () => {
         <div>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Mlink
-              href='./viewpost'
+              href='/react-node-typescript-mysql-crud-movie-review-blog/viewpost'
+              // href='/viewpost'
               underline='none'
               sx={{ marginRight: '20px' }}
             >
@@ -48,7 +54,11 @@ const Navbar = () => {
                 ViewPost
               </Button>
             </Mlink>
-            <Mlink href='./createpost' underline='none'>
+            <Mlink
+              href='/react-node-typescript-mysql-crud-movie-review-blog/createpost'
+              // href='/createpost'
+              underline='none'
+            >
               <Button startIcon={<PostAddIcon />} sx={{ color: 'white' }}>
                 Create Post
               </Button>
