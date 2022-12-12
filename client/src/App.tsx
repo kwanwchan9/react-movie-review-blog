@@ -12,9 +12,9 @@ function App() {
       {/* <BrowserRouter> */}
       <Navbar />
       <Routes>
-        <Route path='./' element={<Home />}></Route>
-        <Route path='./viewpost' element={<ViewPost />}></Route>
-        <Route path='./createpost' element={<CreatePost />}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/viewpost' element={<ViewPost />}></Route>
+        <Route path='/createpost' element={<CreatePost />}></Route>
       </Routes>
       {/* </BrowserRouter> */}
     </HashRouter>
