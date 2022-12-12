@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-node-typescript-mysql-crud-movie-review-blog/static/css/main.c6d63173.css",
-    "main.js": "/react-node-typescript-mysql-crud-movie-review-blog/static/js/main.34780ef8.js",
+    "main.js": "/react-node-typescript-mysql-crud-movie-review-blog/static/js/main.d276e5b5.js",
     "index.html": "/react-node-typescript-mysql-crud-movie-review-blog/index.html",
     "main.c6d63173.css.map": "/react-node-typescript-mysql-crud-movie-review-blog/static/css/main.c6d63173.css.map",
-    "main.34780ef8.js.map": "/react-node-typescript-mysql-crud-movie-review-blog/static/js/main.34780ef8.js.map"
+    "main.d276e5b5.js.map": "/react-node-typescript-mysql-crud-movie-review-blog/static/js/main.d276e5b5.js.map"
   },
   "entrypoints": [
     "static/css/main.c6d63173.css",
-    "static/js/main.34780ef8.js"
+    "static/js/main.d276e5b5.js"
   ]
 }
