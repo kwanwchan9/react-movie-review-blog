@@ -2,8 +2,6 @@
 
 Simple fullstack movie review blog page using React library, TypeScript, Nodejs & Express.js, Material UI CSS framework & icon with mySQL database.
 
-### [Demo Link](http://kwanwchan9.github.io/react-node-typescript-mysql-crud-movie-review-blog)
-
 # Instruction
 
 1. Clone the project and run `npm install` and `npm run start` under the root folder.
