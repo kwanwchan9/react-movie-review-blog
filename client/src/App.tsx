@@ -1,14 +1,13 @@
 import React from 'react'
-import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import ViewPost from './pages/ViewPost'
 import CreatePost from './pages/CreatePost'
 import './App.css'
 
-function App() {
+const App: React.FC = () => {
   return (
-    // <HashRouter>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -17,7 +16,6 @@ function App() {
         <Route path='/createpost' element={<CreatePost />}></Route>
       </Routes>
     </BrowserRouter>
-    // </HashRouter>
   )
 }
 
